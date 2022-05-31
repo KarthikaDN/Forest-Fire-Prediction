@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+  <link rel="stylesheet" href="../static/forest_fire.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><img class="fire-logo" src="../static/fire.jpg"  alt="logo">
+      <span class="heading">Forest Fire Prediction </span>
+      
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      
+      <div class="row center">
+        <h3 class="header col s12 light">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h3>
+      </div>
+
+      <div class="form-data">         
+    <form action='/predict' method="post" class="col s12">
+      
+    
+
+
+     
+            <label for="first_name"><b>Temperature</b></label>
+            <br>
+          <input class="form-control" placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate" required>
+        <br><br>
+        
+
+          <label for="last_name"><b>Oxygen </b></label>
+            <br>
+          <input class="form-control" id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate" required>
+
+        <br><br>
+
+        
+            <label for="_name"><b>Humidity</b></label>
+            <br>
+          <input class="form-control" id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate" required>
+
+        
+
+    
+      <br>
+      
+
+          <button type="submit" class="btn btn-lg btn-success">Predict Probability</button>
+          {% if pred == "" %}
+          <h2 style="text-align: center;">Enter values</h2>
+          {% endif %}
+          {% if pred != "" %}
+          <h2 style="text-align: center;">{{pred}}</h2>
+          {% endif %}
+    </form>
+  </div> 
+      </div>
+
+      <br>
+        <br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  </body>
+</html>
+
